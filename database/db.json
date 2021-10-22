@@ -1,0 +1,24 @@
+{
+  "fooditems": [
+    {
+      "name": "Beef Momo",
+      "price": "90",
+      "id": 2
+    },
+    {
+      "name": "Chicken Momo",
+      "price": "90",
+      "id": 3
+    },
+    {
+      "name": "Momo",
+      "price": "50",
+      "id": 4
+    },
+    {
+      "name": "Beef Fried Rice (BFR)",
+      "price": "120",
+      "id": 5
+    }
+  ]
+}

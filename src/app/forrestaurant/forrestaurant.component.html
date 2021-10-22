@@ -1,0 +1,35 @@
+<h2>For Restaurant Owner</h2>
+
+<mat-tab-group>
+
+  <mat-tab label="Manage Food Item">
+    <table id="fooditems">
+      <tr>
+        <th>Serial No.</th>
+        <th>Name</th>
+        <th>Price (in Nu.)</th>
+      </tr>
+
+      <tr *ngFor="let item of fooditems">
+        <td> {{item.id}}</td>
+        <td> {{item.name}} </td>
+        <td> Nu.{{item.price}} </td>
+        <td>
+          <i (click)="deleteItem(item.id)" class=" delete fa fa-trash" style="cursor: pointer;"></i>
+          &nbsp;
+          <a (click)="openDialog()"><i class="fa fa-edit" style="cursor: pointer;"></i></a>
+        </td>
+        
+      </tr>
+    </table>
+
+    <button mat-raised-button color="primary"  (click)="openDialog()">Add</button>
+    
+  </mat-tab>
+  
+
+  <mat-tab label="Customers Order">
+    <button mat-raised-button color="primary">Add</button>
+  </mat-tab>
+</mat-tab-group>
+

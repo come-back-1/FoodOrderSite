@@ -1,0 +1,51 @@
+/*
+.mat-table {
+    width: 100%;
+}
+.mat-form-field {
+    width: 100%;
+}
+
+.matTable button {
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: small;
+    margin-top: 0;
+}
+*/
+
+#fooditems {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    //margin-top: 50px;
+    border-collapse: collapse;
+    width: 90%;
+}
+#fooditems td, #fooditems th {
+    border: 1px solid white;
+    padding: 8px;
+}
+#fooditems tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#fooditems tr:hover {background-color: #ddd;}
+
+#fooditems th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+#formfield {padding-top: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+}
+.mat-raised-button {
+    float: right;
+    right: 50px;
+    margin-top: 50px;
+    color: black;
+}

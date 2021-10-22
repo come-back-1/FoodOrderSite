@@ -1,0 +1,16 @@
+<mat-toolbar >
+   <mat-icon>local_dining</mat-icon>
+  <span>Food Order App</span>
+  <span class="example-spacer"></span>
+
+  <mat-menu #appMenu="matMenu">
+    <a mat-menu-item  href="forcustomer">For Customers</a>
+    <a mat-menu-item href="forrestaurant">For Restaurant Owner</a>
+    <a mat-menu-item href="forhrmanager">For HR Manager</a>
+  </mat-menu>
+  <a mat-icon-button [matMenuTriggerFor]="appMenu" 
+  class="example-icon" aria-label="Example icon-button with share icon"fxHide fxShow.lt-md>
+    <mat-icon>menu</mat-icon>
+
+</a>
+</mat-toolbar>

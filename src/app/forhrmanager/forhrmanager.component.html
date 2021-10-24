@@ -1,10 +1,38 @@
 <h2>For HR Manager</h2>
 
 <mat-tab-group>
-    <mat-tab label="Available Menu"> 
+    <mat-tab label="Available Menu">
+      <label for="search" class="" style="text-align: right;">Search for an item</label>
+      <input type="text" [(ngModel)]="searchValue" >
+
+
+      <table id="item-menu">
+        <tr>
+          <th (click)="sort('id')"> <i class="fa fa-sort"></i>  Item #_id</th>
+          <th>  Name  </th>
+          <th>  Price (in Nu.)  </th>
+        </tr>
+
+        <tr  *ngFor="let item of itemMenu | searchfilter:searchValue |  orderBy: key: reverse | paginate: {itemsPerPage:7, currentPage:p};">
+          <td> #_{{item.id}}</td>
+          <td> {{item.name}} </td>
+          <td> Nu.{{item.price}} </td>
+          <td>
+            <a routerLink="/order/{{item.id}}" style="cursor: pointer;">Order Now</a>
+          </td>
+        </tr>
+      </table>
+
+      <pagination-controls (pageChange) = "p = $event"></pagination-controls>
+
+      <button mat-raised-button color="primary" style="float: right;" (click)="openCustomDialog()">Place Custom Order</button>
+
+
   </mat-tab>
-    <mat-tab label="Placing Custom Food Order"> 
-  </mat-tab>
+
+  
+  
+  
   <mat-tab label="Revenue and Payment Records"> 
 </mat-tab>
   </mat-tab-group>

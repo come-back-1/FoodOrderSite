@@ -1,0 +1,20 @@
+<h2>For Restaurant Owner</h2>
+
+<h3>Update Menu Item</h3>
+
+
+<a href="forrestaurant">Go back to Manage Food Item</a>
+
+<ul style="margin-top: 100px;" [formGroup]="editFood">
+<mat-form-field appearance="fill">
+    <mat-label>Edit name</mat-label>
+    <input matInput formControlName="name" #message>
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field appearance="fill">
+    <mat-label>Edit price</mat-label>
+    <input matInput formControlName="price" #action>
+</mat-form-field>  
+&nbsp;
+<button mat-raised-button (click)="updateFoodItem()" (click)="openSnackBar(message.value, action.value)">Update</button>
+</ul>

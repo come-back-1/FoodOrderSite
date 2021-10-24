@@ -3,14 +3,24 @@
   <mat-form-field appearance="fill">
     <mat-label>Item name</mat-label>
     <input matInput formControlName="name" #message>
+    <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" style="color: red; font-size: smaller;">
+      <div *ngIf="f.name.errors?.required">
+        name is required
+      </div>
+    </div>
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Item price</mat-label>
     <input matInput formControlName="price" #action>
+    <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" style="color: red; font-size: smaller;">
+      <div *ngIf="f.price.errors?.required">
+        name is required
+      </div>
+    </div>
   </mat-form-field>
   <div mat-dialog-actions>
     <button mat-button (click)="cancel()">Cancel</button>
-    <button mat-button (click)="save()" (click)="openSnackBar(message.value, action.value)" cdkFocusInitial>Add Item</button>
+    <button mat-button [disabled]="addFood.invalid" (click)="save()" (click)="openSnackBar(message.value, action.value)" cdkFocusInitial>Add Item</button>
   </div>
 </div>
 

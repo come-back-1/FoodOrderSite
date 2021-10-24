@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialogData } from '../forrestaurant/forrestaurant.component';
 import { ItemsService } from '../services/items.service';
@@ -20,8 +20,8 @@ export class AddItemDialogComponent implements OnInit {
 
 
     addFood=new FormGroup( {
-      name: new FormControl(''),
-      price:new FormControl('')
+      name: new FormControl('', [Validators.required,  Validators.minLength(3)]),
+      price:new FormControl('',[Validators.required,  Validators.minLength(2)])
     });
     
     
@@ -43,6 +43,10 @@ export class AddItemDialogComponent implements OnInit {
     this._snackBar.open(message="Successfully added!!!",  action="close")
   }
   
+  get f(){
+    return this.addFood.controls
+  }
+
 }
 
 

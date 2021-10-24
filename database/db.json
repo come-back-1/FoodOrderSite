@@ -1,23 +1,96 @@
 {
   "fooditems": [
     {
-      "name": "Beef Momo",
-      "price": "90",
-      "id": 2
-    },
-    {
-      "name": "Chicken Momo",
-      "price": "90",
+      "name": "Chicken Chilly",
+      "price": "120",
       "id": 3
     },
     {
-      "name": "Momo",
-      "price": "50",
+      "name": "Beef Momo",
+      "price": "90",
       "id": 4
     },
     {
       "name": "Beef Fried Rice (BFR)",
       "price": "120",
+      "id": 5
+    },
+    {
+      "name": "Chicken Fried Rice",
+      "price": "120",
+      "id": 6
+    },
+    {
+      "name": "Chicken Legs",
+      "price": "120",
+      "id": 8
+    },
+    {
+      "name": "Fried Beef Momo",
+      "price": "70",
+      "id": 9
+    },
+    {
+      "name": "French Fried",
+      "price": "60",
+      "id": 10
+    },
+    {
+      "name": "Cheese Pakora",
+      "price": "30",
+      "id": 11
+    },
+    {
+      "name": "WaiWai",
+      "price": "50",
+      "id": 12
+    },
+    {
+      "name": "Crispy Chilly Potato",
+      "price": "120",
+      "id": 14
+    },
+    {
+      "name": "Steam Momo",
+      "price": "130",
+      "id": 15
+    }
+  ],
+  "ordereditems": [
+    {
+      "id": 3,
+      "name": "Chicken Chilly",
+      "price": "120",
+      "itemQt": "1"
+    },
+    {
+      "id": 8,
+      "name": "Chicken Legs",
+      "price": "120",
+      "itemQt": "d"
+    },
+    {
+      "id": 10,
+      "name": "French Fried",
+      "price": "60",
+      "itemQt": "3",
+      "status": "CoD"
+    },
+    {
+      "id": 9,
+      "name": "Fried Beef Momo",
+      "price": "70",
+      "itemQt": "3",
+      "status": "By Card"
+    }
+  ],
+  "customorders": [
+    {
+      "name": "Chocolate Cake For Birthday",
+      "id": 2
+    },
+    {
+      "name": "2x spicy noddle for 2 person",
       "id": 5
     }
   ]

@@ -28,7 +28,7 @@
     background-color: #f2f2f2;
 }
 
-#fooditems tr:hover {background-color: #ddd;}
+//#fooditems tr:hover {background-color: #ddd;}
 
 #fooditems th{
     padding-top: 12px;
@@ -48,4 +48,55 @@
     right: 50px;
     margin-top: 50px;
     color: black;
+}
+
+//-----------SCSS For Order Detail Tab
+
+#orderDetails {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    //margin-top: 50px;
+    border-collapse: collapse;
+    width: 90%;
+}
+#orderDetails td, #orderDetails th {
+    border: 1px solid white;
+    padding: 8px;
+}
+#orderDetails tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#orderDetails tr:hover {background-color: #ddd;}
+
+#orderDetails th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+//
+#customOrders {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    //margin-top: 50px;
+    border-collapse: collapse;
+    width: 90%;
+}
+#customOrders td, #customOrders th {
+    border: 1px solid white;
+    padding: 8px;
+}
+#customOrders tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#customOrders tr:hover {background-color: #ddd;}
+
+#customOrders th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
 }

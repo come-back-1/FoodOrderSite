@@ -27,6 +27,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ForhrmanagerComponent } from './forhrmanager/forhrmanager.component';
+import { EditItemComponent } from './edit-item/edit-item.component';
+import { DataTablesModule } from 'angular-datatables';
+import { OrderItemComponent } from './order-item/order-item.component';
+import { CustomOrderDialogComponent } from './custom-order-dialog/custom-order-dialog.component';
+import { SearchfilterPipe } from './searchfilter.pipe'
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +42,11 @@ import { ForhrmanagerComponent } from './forhrmanager/forhrmanager.component';
     ForcustomerComponent,
     ForrestaurantComponent,
     AddItemDialogComponent,
-    ForhrmanagerComponent
+    ForhrmanagerComponent,
+    EditItemComponent,
+    OrderItemComponent,
+    CustomOrderDialogComponent,
+    SearchfilterPipe
 
   ],
   imports: [
@@ -56,6 +68,9 @@ import { ForhrmanagerComponent } from './forhrmanager/forhrmanager.component';
     MatSelectModule,
     MatSnackBarModule,
     MatPaginatorModule,
+    DataTablesModule,
+    Ng2OrderModule,
+    NgxPaginationModule,
   
     LayoutModule,
   ],

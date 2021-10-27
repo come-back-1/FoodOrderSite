@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
-## Local Json Database server
+## Local JSON Database server
 
-Run `json-server --watch db.json' for database. 
+Run `json-server --watch db.json' for database.
 
 ## Development server
 

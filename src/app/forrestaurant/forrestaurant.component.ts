@@ -5,12 +5,6 @@ import { AddItemDialogComponent } from '../add-item-dialog/add-item-dialog.compo
 import { ItemsService } from '../services/items.service';
 import { Orders } from '../orders';
 import { CustomOrders } from '../customorder';
-/*
-export interface DialogEditData{
-  food_name:string;
-  food_price:number;
-}
-*/
 
 export interface DialogData {
   foodName:string;
@@ -30,8 +24,6 @@ export class ForrestaurantComponent implements OnInit{
 
   p:number =1;
 
-  //edit_food_name!:string;
-  //edit_food_price!:number;
 
 /*
   openEditDialog(id:any){
@@ -107,6 +99,14 @@ export class ForrestaurantComponent implements OnInit{
     })
   }
 
+  approveOrderedItem(){                                                           //Approving Order Items
+    this.fooditem.saveOrderItemToYourOrder(this.ordereditems.value).subscribe((result)=>
+    {
+      console.log(result);
+      //this.ngOnInit();
+    })
+  }
+
   removeOrderItem(item_id:any){                                             //removing order item
     this.fooditem.deleteOrderItem(item_id).subscribe((result)=>{            
       //console.log(result)
@@ -114,7 +114,7 @@ export class ForrestaurantComponent implements OnInit{
     })
   }
 
-  removeCustomItem(item_id:any){                                             //removing order item
+  removeCustomItem(item_id:any){                                             //removing custom order item
     this.fooditem.deleteCustomOrder(item_id).subscribe((result)=>{            
       //console.log(result)
       this.ngOnInit()

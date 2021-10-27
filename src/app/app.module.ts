@@ -34,6 +34,7 @@ import { CustomOrderDialogComponent } from './custom-order-dialog/custom-order-d
 import { SearchfilterPipe } from './searchfilter.pipe'
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     DataTablesModule,
     Ng2OrderModule,
     NgxPaginationModule,
+    MatGridListModule,
   
     LayoutModule,
   ],

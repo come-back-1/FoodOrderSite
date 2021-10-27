@@ -1,0 +1,22 @@
+a {
+    font-style: italic;
+    //text-decoration: underline;
+    animation: sidenav 5s 1;
+}
+a:hover {
+    background-color: lightgrey;
+}
+.sidenav{
+    width: 200px;
+    height: 100vh;
+    margin-top: 0px;
+    position: absolute;
+    right: 0;
+    top: 0; 
+}
+
+@keyframes sidenav{
+    0% {
+        margin-left: -100px;
+    }
+}

@@ -1,13 +1,30 @@
-<app-header></app-header>
-<mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>
-        <app-sidebar></app-sidebar>
-    </mat-drawer>
-    <mat-drawer-content>
-      <!--Main Content-->
+<div class="front-page">
 
- 
-      <router-outlet></router-outlet>
-    </mat-drawer-content>
-  </mat-drawer-container>
+  <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <router-outlet></router-outlet>
+
+      <small class="text1">
+                               Welcome to Food Order Site <br>
+      </small>
+      <h1 class="text2">  <span class="text2-1">
+                                  Good Food,    </span> <br>
+         <span class="text2-2">    Good Mood    </span>   
+      
+      </h1>
+
+        <div class="smokes" style="width: 100%; 
+        display: flex; align-items: center; 
+        justify-content: space-around; 
+        position: absolute; bottom: 0;">
+          <img src="../assets/images/smoke.png" alt="">
+          <img src="../assets/images/smoke.png" alt="">
+          <img src="../assets/images/smoke.png" alt="">
+          <img src="../assets/images/smoke.png" alt="">
+          <img src="../assets/images/smoke.png" alt="">
+          <img src="../assets/images/smoke.png" alt="">
+          <img src="../assets/images/smoke.png" alt="">
+        </div>
+        
+</div>
 <app-footer></app-footer>

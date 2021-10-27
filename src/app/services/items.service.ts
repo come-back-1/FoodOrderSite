@@ -9,11 +9,13 @@ import { CustomOrders } from '../customorder';
 })
 export class ItemsService {
 
-  urlfood : string = "http://localhost:3000/fooditems";     //--fetching Fooditem from database using json server
+  urlfood : string = "http://localhost:3000/fooditems";    
 
   urlorder : string = "http://localhost:3000/ordereditems";
 
   urlcustomorder : string = "http://localhost:3000/customorders";
+
+  urlyourorder : string = "http://localhost:3000/yourorders";
 
 
   constructor( private http:HttpClient ) { }
@@ -61,6 +63,12 @@ export class ItemsService {
   deleteOrderItem( id: any ){  //function to delete item stored in json database
     return this.http.delete(`${this.urlorder}/${id}`) //concatenating 
 
+  }
+
+  saveOrderItemToYourOrder(data:any){                        //----------function to save the ordered food item on database
+    console.log(data);
+    return this.http.post(this.urlyourorder, data)
+   // return this.http.put(this.urlorder + '/' + data.id, data)
   }
 
   //Custom Order

@@ -61,37 +61,37 @@
       "id": 3,
       "name": "Chicken Chilly",
       "price": "120",
-      "itemQt": "1"
+      "itemQt": "2",
+      "status": "By Card"
     },
     {
       "id": 8,
       "name": "Chicken Legs",
       "price": "120",
-      "itemQt": "d"
-    },
-    {
-      "id": 10,
-      "name": "French Fried",
-      "price": "60",
-      "itemQt": "3",
+      "itemQt": "2",
       "status": "CoD"
     },
     {
       "id": 9,
       "name": "Fried Beef Momo",
       "price": "70",
-      "itemQt": "3",
+      "itemQt": "2",
       "status": "By Card"
     }
   ],
-  "customorders": [
+  "customorders": [],
+  "yourorders": [
     {
-      "name": "Chocolate Cake For Birthday",
+      "id": 1,
+      "name": "Beef Momo",
+      "totalamt": 200,
+      "response": "Approved"
+    },
+    {
       "id": 2
     },
     {
-      "name": "2x spicy noddle for 2 person",
-      "id": 5
+      "id": 3
     }
   ]
 }

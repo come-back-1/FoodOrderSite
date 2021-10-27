@@ -1,19 +1,19 @@
 <h2>For Restaurant Owner</h2>
 
-<mat-tab-group>
+<mat-tab-group class="group" style="width: 100%;" >
 
-  <mat-tab label="Manage Food Item">
+  <mat-tab id="tab1" label="Manage Food Item">
     <table id="fooditems">
       <tr>
-        <th>Item #_id</th>
-        <th>Name</th>
-        <th>Price (in Nu.)</th>
+        <th>      Item #_id      </th>
+        <th>      Name          </th>
+        <th>      Price (in Nu.)</th>
       </tr>
 
       <tr *ngFor="let item of fooditems | paginate: {itemsPerPage:7, currentPage:p};">
-        <td> #_{{item.id}}</td>
-        <td> {{item.name}} </td>
-        <td> Nu.{{item.price}} per </td>
+        <td>  #_{{item.id}}       </td>
+        <td>   {{item.name}}      </td>
+        <td>  Nu.{{item.price}} per  </td>
         <td>
           <a routerLink="/edit/{{item.id}}"><i class="fa fa-edit" style="cursor: pointer;"></i></a>
           &nbsp;
@@ -22,29 +22,30 @@
       </tr>
     </table>
 
-    <pagination-controls (pageChange) = "p = $event"></pagination-controls>
+    <pagination-controls (pageChange) = "p = $event" ></pagination-controls>
 
-    <button mat-raised-button color="primary" (click)="openDialog()">Add</button>
+    <button mat-raised-button color="primary" (click)="openDialog()">          Add New Item</button>
   </mat-tab>
   
 
-  <mat-tab label="Selise HR Manager's Order">
+  <mat-tab label="Selise HR Manager's Order" style="color: white;">
     <table id="orderDetails">
       <tr>
-        <th (click)="sort('name')"><i class="fa fa-sort"></i> Orders</th>
-        <th>Quantity</th>
-        <th>Total Amount</th>
-        <th>Status</th>
-        <th>Actions</th>
+        <th (click)="sort('name')"><i class="fa fa-sort"></i> 
+                                Orders</th>
+        <th>    Quantity</th>
+        <th>    Total Amount</th>
+        <th>    Status</th>
+        <th>    Actions</th>
       </tr>
 
       <tr *ngFor="let order of ordereditems |  orderBy: key: reverse  | paginate: {itemsPerPage:4, currentPage:p}">
-        <td>{{order.itemQt}} {{order.name}}  </td>
-        <td> {{order.itemQt}}  </td>
-        <td> {{order.itemQt}} x {{order.price}}</td>
-        <td> {{order.status}} </td>
+        <td>    {{order.itemQt}} {{order.name}}  </td>
+        <td>     {{order.itemQt}}  </td>
+        <td>     {{order.itemQt}} x {{order.price}}</td>
+        <td>     {{order.status}} </td>
         <td>
-          <i class="fa fa-check" style="cursor: pointer;"></i>
+          <i  (click)="approveOrderedItem()"  class="fa fa-check" style="cursor: pointer;"></i>
           &nbsp;
           <i (click)="removeOrderItem(order.id)" class=" delete fa fa-times" style="cursor: pointer; float: right;"></i>
         </td>
@@ -55,18 +56,18 @@
     </table>
   </mat-tab>
 
-  <mat-tab label="Custom Orders">
+  <mat-tab label="Custom Orders" style="color: white;">
     <table id="customOrders">
       <tr>
-        <th>Order #_id</th>
-        <th>Order Name</th>
+        <th>    Order #_id</th>
+        <th>    Order Name</th>
 
-        <th>Actions</th>
+        <th>    Actions</th>
       </tr>
 
       <tr *ngFor="let custom of customorders">
-        <td> #_{{custom.id}} </td>
-        <td> {{custom.name}} </td>
+        <td>     #_{{custom.id}} </td>
+        <td>    {{custom.name}} </td>
 
         <td>
           <i class="fa fa-check" style="cursor: pointer;"></i>

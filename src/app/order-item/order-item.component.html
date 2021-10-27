@@ -1,58 +1,58 @@
-<h2>For HR Manager</h2>
+<h2>    For HR Manager    </h2>
 
-<h3>Order Menu Item</h3>
+<h1>    Order Summary     </h1>
 
 
-<a href="forhrmanager">Go back</a>
+<a href="forhrmanager">
+        Go back</a>
 
-<p>Order Summary</p>
 
-<ul fxLayout="row" fxLayoutAlign="space-evenly center" style="background-color: wheat;">
+
+<ul fxLayout="row" fxLayoutAlign="space-evenly center">
 
 <ul  [formGroup]="orderFood" fxLayout="column" fxLayoutAlign="center center">
 <mat-form-field appearance="fill">
-    <mat-label>Item #_id</mat-label>
+    <mat-label>   Item #_id   </mat-label>
     <input formControlName="id" matInput [readonly]="true">
   </mat-form-field>
   &nbsp;
-  <mat-form-field appearance="fill">
-    <mat-label>Item name</mat-label>
+  <mat-form-field appearance="fill" style="margin-top: 40px; width: 100%;">
+    <mat-label>   Item name     </mat-label>
     <input formControlName="name" matInput [readonly]="true">
 </mat-form-field>  
 &nbsp;
-<mat-form-field appearance="fill">
-  <mat-label>price</mat-label>
-  <input formControlName="price" matInput [readonly]="true" #message #action>
+<mat-form-field appearance="fill" style="margin-top: 40px;">
+  <mat-label>     price         </mat-label>
+  <input formControlName="price" matInput [readonly]="true" #message #action> 
 </mat-form-field>  
 &nbsp;
 
 </ul>
 
-  <ul [formGroup]="orderFood" fxLayout="column" fxLayoutAlign="center center">
+  <ul [formGroup]="orderFood" fxLayout="column" fxLayoutAlign="center center" style="position: relative;right: 70px;">
   <span class="spacer"></span>
-  <mat-form-field appearance="fill">
-      <mat-label>Quantity</mat-label>
-      <input matInput formControlName="itemQt">
+  <mat-form-field appearance="fill" style="margin-top: 25px;">
+      <mat-label>      Quantity      </mat-label>
+      <input matInput formControlName="itemQt" >
       <div *ngIf="f.itemQt.invalid && (f.itemQt.dirty || f.itemQt.touched)" style="color: red; font-size: smaller;">
         <div *ngIf="f.itemQt.errors?.required">
-          Item Quantity is required
+                                              Item Quantity is required
         </div>
       </div>
     </mat-form-field> 
     &nbsp;
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" style="margin-top: 35px;">
       <mat-label>Payment Method</mat-label>
       <mat-select formControlName="status">
-        <mat-option value="By Card">Payment by Card</mat-option>
-        <mat-option value="CoD">Cash On Delivery</mat-option>
+        <mat-option value="By Card">          Payment by Card   </mat-option>
+        <mat-option value="CoD">              Cash On Delivery    </mat-option>
       </mat-select>
     </mat-form-field> 
     &nbsp;
     <button mat-raised-button [disabled]="orderFood.invalid" (click)="saveOrder()"  
       (click)="openSnackBar(message.value, action.value)" cdkFocusInitial>
-      Order     
-    </button>
+                                                                Place  Order</button>
 
   </ul>
 

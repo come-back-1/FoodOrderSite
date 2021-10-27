@@ -1,9 +1,32 @@
+
 .mat-dialog-content{
     height: 225px;
+
 }
 .mat-form-field{
     display: inline;
 }
 .mat-raised-button {
     float: right;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+.mat-button {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mat-raised-button {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mat-raised-button:hover{
+    background-color: grey;
 }

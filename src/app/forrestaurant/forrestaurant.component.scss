@@ -1,18 +1,15 @@
-/*
-.mat-table {
-    width: 100%;
+.group {
+    animation: group 5s 1;
 }
-.mat-form-field {
-    width: 100%;
+@keyframes group {
+    0% {
+        margin-left: -100px;
+    }
 }
 
-.matTable button {
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-size: small;
-    margin-top: 0;
+#tab1{
+    background-color: #ddd;
 }
-*/
 
 #fooditems {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -22,10 +19,10 @@
 }
 #fooditems td, #fooditems th {
     border: 1px solid white;
-    padding: 8px;
+    padding: 5px;
 }
-#fooditems tr:nth-child(even){
-    background-color: #f2f2f2;
+#fooditems tr:nth-child(odd){
+    background-color:#ddd;
 }
 
 //#fooditems tr:hover {background-color: #ddd;}
@@ -34,8 +31,9 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: black;
-    color: white;
+    background: transparent;
+    //background-color: grey;
+    color: black;
 }
 
 #formfield {padding-top: 12px;
@@ -48,6 +46,14 @@
     right: 50px;
     margin-top: 50px;
     color: black;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mat-raised-button:hover {
+    background-color: grey;
 }
 
 //-----------SCSS For Order Detail Tab
@@ -60,10 +66,10 @@
 }
 #orderDetails td, #orderDetails th {
     border: 1px solid white;
-    padding: 8px;
+    padding: 5px;
 }
-#orderDetails tr:nth-child(even){
-    background-color: #f2f2f2;
+#orderDetails tr:nth-child(odd){
+    background-color: #ddd;
 }
 
 #orderDetails tr:hover {background-color: #ddd;}
@@ -72,8 +78,8 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: black;
-    color: white;
+    background: transparent;
+    color: black;
 }
 
 //
@@ -85,10 +91,10 @@
 }
 #customOrders td, #customOrders th {
     border: 1px solid white;
-    padding: 8px;
+    padding: 5px;
 }
-#customOrders tr:nth-child(even){
-    background-color: #f2f2f2;
+#customOrders tr:nth-child(odd){
+    background-color: #ddd;
 }
 
 #customOrders tr:hover {background-color: #ddd;}
@@ -97,6 +103,6 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: black;
-    color: white;
+    background: transparent;
+    color: black;
 }
